@@ -9,27 +9,32 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- For Slider Effect on Hero Product  -->
   <style>
-  .hero-slide,
-  .hero-image {
-    opacity: 0;
-    transform: translateX(40px);
-    transition: all 0.8s ease-in-out;
-    position: absolute;
-  }
+  /* HERO SLIDER */
+   .hero-slide,
+   .hero-image {
+     opacity: 0;
+     transform: translateX(40px);
+     transition: opacity 0.8s ease, transform 0.8s ease;
+     position: absolute;
+     inset: 0;
+   }
 
-  .hero-slide.active,
-  .hero-image.active {
-    opacity: 1;
-    transform: translateX(0);
-    position: relative;
-  }
-</style>
+   .hero-slide.active,
+   .hero-image.active {
+     opacity: 1;
+     transform: translateX(0);
+     position: relative;
+   }
+ </style>
+
 
 
   <!-- Optional: AOS animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <script>
+document.addEventListener("DOMContentLoaded", function () {
+
   let currentSlide = 0;
   const slides = document.querySelectorAll(".hero-slide");
   const images = document.querySelectorAll(".hero-image");
@@ -42,11 +47,18 @@
     images[index].classList.add("active");
   }
 
+  // show first slide immediately
+  showSlide(currentSlide);
+
+  // auto slide every 3 seconds
   setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-  }, 3000); // change every 3 seconds
+  }, 3000);
+
+});
 </script>
+
 
 </head>
 
@@ -78,7 +90,7 @@
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6 items-center">
 
     <!-- TEXT SLIDER -->
-    <div class="relative h-[260px]" data-aos="fade-right">
+    <div class="relative min-h-[260px]">
 
       <!-- Slide 1 -->
       <div class="hero-slide active">
@@ -96,28 +108,29 @@
         <h1 class="text-5xl font-bold text-green-500 mt-3">Skinjal</h1>
         <h1 class="text-5xl font-bold text-green-500 uppercase mt-2">Facewash</h1>
         <p class="mt-4 text-gray-600 max-w-md">
-          Gentle & effective skin cleansing solution.
+          Gentle and effective skin care solution.
         </p>
       </div>
 
     </div>
 
     <!-- IMAGE SLIDER -->
-    <div class="relative w-full h-[450px] flex items-center justify-center" data-aos="fade-left">
+    <div class="relative h-[450px] flex items-center justify-center">
 
       <img
         src="product1.png"
-        class="hero-image active w-[300px] h-[450px] object-contain absolute"
         alt="PG Hair Tablets"
+        class="hero-image active w-[300px] h-[450px] object-contain"
       />
 
       <img
         src="product2.png"
-        class="hero-image w-[300px] h-[450px] object-contain absolute"
         alt="Skinjal Facewash"
+        class="hero-image w-[300px] h-[450px] object-contain"
       />
 
     </div>
+
   </div>
 </section>
 
