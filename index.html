@@ -28,6 +28,26 @@
 
   <!-- Optional: AOS animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".hero-slide");
+  const images = document.querySelectorAll(".hero-image");
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    images.forEach(img => img.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    images[index].classList.add("active");
+  }
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 3000); // change every 3 seconds
+</script>
+
 </head>
 
 <body class="bg-white text-gray-900">
