@@ -7,6 +7,24 @@
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- For Slider Effect on Hero Product  -->
+  <style>
+  .hero-slide,
+  .hero-image {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s ease-in-out;
+    position: absolute;
+  }
+
+  .hero-slide.active,
+  .hero-image.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+  }
+</style>
+
 
   <!-- Optional: AOS animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -36,26 +54,53 @@
 </nav>
 
 <!-- ================= HERO ================= -->
-<section id="home" class="min-h-screen flex items-center bg-gray-100">
+<section id="home" class="min-h-screen flex items-center bg-gray-100 overflow-hidden">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6 items-center">
 
-    <div data-aos="fade-right">
-      <h2 class="text-2xl font-bold">VNW</h2>
-      <h1 class="text-5xl font-bold text-green-500 mt-3">PG Hair</h1>
-      <h1 class="text-5xl font-bold text-green-500 uppercase mt-2">Tablets</h1>
-      <p class="mt-4 text-gray-600 max-w-md">
-        High quality pharmaceutical products designed for hair and skin care.
-      </p>
+    <!-- TEXT SLIDER -->
+    <div class="relative h-[260px]" data-aos="fade-right">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide active">
+        <h2 class="text-2xl font-bold">VNW</h2>
+        <h1 class="text-5xl font-bold text-green-500 mt-3">PG Hair</h1>
+        <h1 class="text-5xl font-bold text-green-500 uppercase mt-2">Tablets</h1>
+        <p class="mt-4 text-gray-600 max-w-md">
+          Advanced hair growth formulation.
+        </p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <h2 class="text-2xl font-bold">VNW</h2>
+        <h1 class="text-5xl font-bold text-green-500 mt-3">Skinjal</h1>
+        <h1 class="text-5xl font-bold text-green-500 uppercase mt-2">Facewash</h1>
+        <p class="mt-4 text-gray-600 max-w-md">
+          Gentle & effective skin cleansing solution.
+        </p>
+      </div>
+
     </div>
 
-    <img
-      src=""
-      alt="Product Image"
-      class="mx-auto w-[300px] h-[450px] object-contain"
-      data-aos="fade-left"
-    />
+    <!-- IMAGE SLIDER -->
+    <div class="relative w-full h-[450px] flex items-center justify-center" data-aos="fade-left">
+
+      <img
+        src="product1.png"
+        class="hero-image active w-[300px] h-[450px] object-contain absolute"
+        alt="PG Hair Tablets"
+      />
+
+      <img
+        src="product2.png"
+        class="hero-image w-[300px] h-[450px] object-contain absolute"
+        alt="Skinjal Facewash"
+      />
+
+    </div>
   </div>
 </section>
+
 
 <!-- ================= PRODUCTS ================= -->
 <section id="products" class="py-16">
