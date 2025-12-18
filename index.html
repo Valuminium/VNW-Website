@@ -86,53 +86,61 @@ document.addEventListener("DOMContentLoaded", function () {
 </nav>
 
 <!-- ================= HERO ================= -->
-<section
-  id="home"
-  class="relative h-[520px] rounded-3xl overflow-hidden
-         bg-gradient-to-r from-indigo-500 via-cyan-500 to-emerald-500
-         flex items-center"
->
-  <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 px-10 items-center">
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
 
-    <!-- TEXT SLIDER -->
-    <div class="relative min-h-[260px] text-white">
+    <section
+      id="home"
+      class="relative h-[520px] rounded-3xl overflow-hidden
+             bg-gradient-to-r from-violet-600 via-blue-500 to-green-500
+             flex items-center shadow-2xl"
+    >
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 px-10 items-center">
 
-      <!-- Slide 1 -->
-      <div class="hero-slide active">
-        <h2 class="text-xl font-semibold">VNW</h2>
-        <h1 class="text-6xl font-extrabold mt-4">PG Hair</h1>
-        <h1 class="text-6xl font-extrabold uppercase leading-none">
-          Tablets
-        </h1>
+        <!-- TEXT SLIDER -->
+        <div class="relative min-h-[260px] text-white">
+
+          <div class="hero-slide active">
+            <h2 class="text-xl font-semibold">VNW</h2>
+            <h1 class="text-6xl font-extrabold mt-4 text-green-300">
+              PG Hair
+            </h1>
+            <h1 class="text-6xl font-extrabold uppercase leading-none text-green-200">
+              Tablets
+            </h1>
+          </div>
+
+          <div class="hero-slide">
+            <h2 class="text-xl font-semibold">VNW</h2>
+            <h1 class="text-6xl font-extrabold mt-4 text-green-300">
+              Skinjal
+            </h1>
+            <h1 class="text-6xl font-extrabold uppercase leading-none text-green-200">
+              Facewash
+            </h1>
+          </div>
+
+        </div>
+
+        <!-- IMAGE SLIDER -->
+        <div class="relative h-full flex items-center justify-end">
+
+          <img
+            src="product1.png"
+            alt="PG Hair Tablets"
+            class="hero-image active w-[360px] drop-shadow-2xl"
+          />
+
+          <img
+            src="product2.png"
+            alt="Skinjal Facewash"
+            class="hero-image w-[360px] drop-shadow-2xl"
+          />
+
+        </div>
+
       </div>
-
-      <!-- Slide 2 -->
-      <div class="hero-slide">
-        <h2 class="text-xl font-semibold">VNW</h2>
-        <h1 class="text-6xl font-extrabold mt-4">Skinjal</h1>
-        <h1 class="text-6xl font-extrabold uppercase leading-none">
-          Facewash
-        </h1>
-      </div>
-
-    </div>
-
-    <!-- IMAGE SLIDER -->
-    <div class="relative h-full flex items-center justify-end">
-
-      <img
-        src="product1.png"
-        alt="PG Hair Tablets"
-        class="hero-image active w-[360px] drop-shadow-2xl"
-      />
-
-      <img
-        src="product2.png"
-        alt="Skinjal Facewash"
-        class="hero-image w-[360px] drop-shadow-2xl"
-      />
-
-    </div>
+    </section>
 
   </div>
 </section>
