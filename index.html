@@ -149,15 +149,18 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- ================= PRODUCTS ================= -->
 <section id="products" class="py-16">
   <div class="max-w-7xl mx-auto px-6 text-center">
+
     <h2 class="text-3xl font-bold">Our Products</h2>
     <p class="text-gray-400 text-sm mt-2">Explore our range</p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+    <!-- GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
 
-      <!-- Product Card -->
-      <div class="border rounded-2xl p-6 shadow-lg hover:shadow-2xl transition flex flex-col h-[420px]">
-        <div class="overflow-hidden rounded">
-          <img src="asset/Images/SkinJal(Photo)-DXc-1BG-.png" alt="Skinjal" class="h-64 w-full object-contain transition-transform duration-500 hover:scale-110 scale-125">
+      <!-- CARD -->
+      <div class="border rounded-2xl p-6 shadow-lg transition hover:shadow-2xl flex flex-col h-[420px]">
+        <div class="h-64 flex items-center justify-center overflow-hidden rounded">
+          <img src="asset/Images/SkinJal(Photo)-DXc-1BG-.png"
+               class="w-full object-contain scale-125">
         </div>
         <div class="mt-4 flex-grow">
           <h3 class="text-lg font-semibold">Skinjal Facewash</h3>
@@ -165,27 +168,60 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
 
-
-      <div class="border rounded-2xl p-6 shadow-lg hover:shadow-2xl transition flex flex-col h-[420px]">
-        <img src="asset/Images/VNW PG Hair New (Feb 2025).jpg" alt="PG Hair" class="h-70 w-full object-cover rounded">
+      <!-- CARD -->
+      <div class="border rounded-2xl p-6 shadow-lg transition hover:shadow-2xl flex flex-col h-[420px]">
+        <div class="h-64 flex items-center justify-center overflow-hidden rounded">
+          <img src="asset/Images/VNW PG Hair New (Feb 2025).jpg"
+               class="w-full object-contain scale-110">
+        </div>
         <div class="mt-4 flex-grow">
           <h3 class="text-lg font-semibold">PG Hair Tablets</h3>
           <p class="font-bold text-xl mt-2">₹---</p>
         </div>
       </div>
 
-      <div class="border rounded-2xl p-6 shadow-lg hover:shadow-2xl transition flex flex-col h-[420px]">
-        <img src="asset/Images/Cohans Soap Image - New.png" alt="Storol 4" class="h-70 w-full object-cover rounded scale-125">
+      <!-- CARD -->
+      <div class="border rounded-2xl p-6 shadow-lg transition hover:shadow-2xl flex flex-col h-[420px]">
+        <div class="h-64 flex items-center justify-center overflow-hidden rounded">
+          <img src="asset/Images/Cohans Soap Image - New.png"
+               class="w-full object-contain scale-125">
+        </div>
         <div class="mt-4 flex-grow">
           <h3 class="text-lg font-semibold">Co Hans</h3>
           <p class="font-bold text-xl mt-2">₹---</p>
         </div>
       </div>
 
-      <div class="border rounded-2xl p-6 shadow-lg hover:shadow-2xl transition flex flex-col h-[420px]">
-        <img src="asset/Images/Storol_8-z7xvoAWt.png" alt="Storol 8" class="h-70 w-full object-cover rounded">
+      <!-- ROW 2 -->
+      <div class="border rounded-2xl p-6 shadow-lg transition hover:shadow-2xl flex flex-col h-[420px]">
+        <div class="h-64 flex items-center justify-center overflow-hidden rounded">
+          <img src="asset/Images/Storol_8-z7xvoAWt.png"
+               class="w-full object-contain scale-110">
+        </div>
         <div class="mt-4 flex-grow">
           <h3 class="text-lg font-semibold">Storol 8</h3>
+          <p class="font-bold text-xl mt-2">₹---</p>
+        </div>
+      </div>
+
+      <div class="border rounded-2xl p-6 shadow-lg transition hover:shadow-2xl flex flex-col h-[420px]">
+        <div class="h-64 flex items-center justify-center overflow-hidden rounded">
+          <img src="asset/Images/product5.png"
+               class="w-full object-contain scale-110">
+        </div>
+        <div class="mt-4 flex-grow">
+          <h3 class="text-lg font-semibold">Product Name</h3>
+          <p class="font-bold text-xl mt-2">₹---</p>
+        </div>
+      </div>
+
+      <div class="border rounded-2xl p-6 shadow-lg transition hover:shadow-2xl flex flex-col h-[420px]">
+        <div class="h-64 flex items-center justify-center overflow-hidden rounded">
+          <img src="asset/Images/product6.png"
+               class="w-full object-contain scale-110">
+        </div>
+        <div class="mt-4 flex-grow">
+          <h3 class="text-lg font-semibold">Product Name</h3>
           <p class="font-bold text-xl mt-2">₹---</p>
         </div>
       </div>
@@ -193,6 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </section>
+
 
 <!-- ================= FEATURES ================= -->
 <section class="bg-gray-100 py-16">
